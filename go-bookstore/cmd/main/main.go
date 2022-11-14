@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -15,6 +16,7 @@ func main() {
 	http.Handle("/", r)
 	log.Fatal(http.ListenAndServe("localhost:9010", r))
 
+	fmt.Println("Iniciando o servidor Docker MySQL na porta 9010")
 }
 
 // Aqui estamos servindo a aplicação na porta local.

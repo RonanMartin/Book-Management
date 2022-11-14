@@ -15,4 +15,4 @@ func ParseBody(r *http.Request, x interface{}) {
 }
 
 // O sistema está lendo o corpo de requisição e não havendo erros estará retornando uma ...
-// ... slice de bytes resultante do Unmarshal da requisição.
+// slice de bytes resultante do Unmarshal da requisição.
