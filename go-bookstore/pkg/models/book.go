@@ -20,19 +20,19 @@ func init() {
 	db.AutoMigrate(&Book{})
 }
 
-// Aqui está chamando as funções do config/app.go para se conectar ao banco de dados e disponibilizá-lo.
-// parece disponibilizar as informações do banco dedados dentro do Struct Book.
+// Here is calling functions from config/app.go to connect to the database and make it available.
+// Makes the database information available inside the Struct Book.
 
 func (b *Book) CreateBook() *Book {
-	db.NewRecord(b) // db nos liga ao banco de dados, e NewRecord é uma função que faz parte do package gorm, que já possui funções para requisições
-	db.Create(&b)   // recebemos um Book do banco de dados, criamos ele dentro do app e retornamos
+	db.NewRecord(b) // db links us to the database, and NewRecord is a function that is part of the gorm package, which already has functions for requests
+	db.Create(&b)   // we receive a Book from the database, create it inside the app and return
 	return b
 }
 
 func GetAllBooks() []Book {
 	var Books []Book
 	db.Find(&Books)
-	return Books // Aqui a função prévia Find, passa um loop dentro do banco de dados e registra os livros dentro da nossa váriável slice de books
+	return Books // Here the previous Find function loops inside the database and registers the books inside our books slice variable
 }
 
 func GetBookById(Id int64) (*Book, *gorm.DB) {

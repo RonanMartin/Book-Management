@@ -13,4 +13,4 @@ var RegisterBookStoreRoutes = func(router *mux.Router) {
 	router.HandleFunc("/book/{bookId}", controllers.DeleteBook).Methods("DELETE")
 }
 
-// aqui definimos qual função cada rota estará chamando.
+// here we define which function each route will be calling.

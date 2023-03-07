@@ -17,12 +17,12 @@ func Connect() {
 		panic(err)
 	}
 	db = d
-	fmt.Println("Iniciando o servidor Docker MySQL na porta 9010")
+	fmt.Println("Starting Docker MySQL server on port 9010")
 }
 
 func GetDB() *gorm.DB {
 	return db
 }
 
-// Aqui a primeira função (Connect()) serve para conectar ao banco de dados
-// e a segunda função está disponibilizando o banco de dados pela variável "db"
+// Here the first function (Connect()) serves to connect to the database
+// and the second function is making the database available through the "db" variable

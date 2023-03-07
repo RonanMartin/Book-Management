@@ -16,8 +16,8 @@ func main() {
 	http.Handle("/", r)
 	log.Fatal(http.ListenAndServe("localhost:9010", r))
 
-	fmt.Println("Iniciando o servidor Docker MySQL na porta 9010")
+	fmt.Println("Starting Docker MySQL server on port 9010")
 }
 
-// Aqui estamos servindo a aplicação na porta local.
-// também estamos chamando a função da rota que lidará com a requisição.
+// Here we are serving the application on the local port.
+// we are also calling the route function that will handle the request.
