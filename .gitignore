@@ -1,0 +1,4 @@
+# .gitignore
+
+# Log files
+*funcMap.xlsx
