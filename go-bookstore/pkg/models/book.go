@@ -8,7 +8,7 @@ import (
 var db *gorm.DB
 
 type Book struct {
-	gorm.Model
+	gorm.Model         // A model is something that gives us a structure to help us store something in the database.
 	Name        string `json:"name"`
 	Author      string `json:"author"`
 	Publication string `json:"publication"`

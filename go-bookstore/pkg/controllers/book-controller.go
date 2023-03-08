@@ -10,7 +10,7 @@ import (
 	"github.com/RonanMartin/Book-Management/pkg/utils"
 	"github.com/gorilla/mux"
 )
-
+ 
 var NewBook models.Book
 
 func GetBook(w http.ResponseWriter, r *http.Request) {

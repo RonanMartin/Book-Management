@@ -11,12 +11,12 @@ var (
 	db *gorm.DB
 )
 
-func Connect() {
+func Connect() { //simplerest is the name of our database in MySQL
 	d, err := gorm.Open("mysql", "root:test123@tcp(localhost:3307)/simplerest?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
-	db = d
+	db = d //Whatever that we had received in "d", we will transfer to our "db" variable.
 	fmt.Println("Starting Docker MySQL server on port 9010")
 }
 
